@@ -1,42 +1,17 @@
 <?php
+
+
+include_once('jobs.php');
+
+
 $last_name = 'Carrasco';
 $first_name = 'Antony';
 $name = "$first_name $last_name";
-$limit_months = 12;
-$jobs = [
-    [
-        'title' => 'PHP Developer',
-        'description' => 'This is an awesome job!!',
-        'visible' => true,
-        'months' => 6
-    ],
-    [
-        'title' =>'Python Developer',
-        'description' => 'Python is the best language i have ever worked with',
-        'visible' => true,
-        'months' => 4
-    ],
-    [
-        'title' =>'DevOps',
-        'description' => 'DevOps is the current technology that i am learning',
-        'visible' => true,
-        'months' => 2
-    ],
-    [
-        'title' =>'Node Developer',
-        'description' => 'Node is the current technology that i am learning',
-        'visible' => false,
-        'months' => 3
-    ],
-    [
-        'title' =>'Fronted',
-        'description' => 'Fronted is the current technology that i am learning',
-        'visible' => true,
-        'months' => 3
-    ],
-];
+$limit_months = 200;
+
 
 $size_jobs = count($jobs);
+
 
 ?>
 
@@ -88,17 +63,7 @@ $size_jobs = count($jobs);
                     for ($i=0; $i < $size_jobs; $i++) {
                         $total_months += $jobs[$i]['months'];
                         if ($jobs[$i]['visible'] == true and $total_months <= $limit_months) {
-                            echo '<li class="work-position">';
-                            echo '<h5>'.$jobs[$i]['title'].'</h5>';
-                            echo '<p>'.$jobs[$i]['description'].'</p>';
-                            echo '<p>'.$total_months.'</p>';
-                            echo '<strong>Achievements:</strong>';
-                            echo '<ul>';
-                            echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-                            echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-                            echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
-                            echo '</ul>';
-                            echo '</li>';
+                          print_job($jobs[$i]);
                         }
                     }
                 ?>
