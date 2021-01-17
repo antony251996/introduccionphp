@@ -119,7 +119,7 @@ $size_projects = count($projects);
     </div>
     <div id="resume-footer" class="row">
       <div class="col">
-          Designed by @hectorbenitez
+          Designed by @antonyCarrasco
       </div>
     </div>
   </div>

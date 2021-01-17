@@ -1,8 +1,11 @@
 <?php
 
-require_once 'BaseElement.php';
+namespace App\Models;
 
-class Jobs extends BaseElement{
+require_once 'BaseElement.php';
+require_once 'Printable.php';
+
+class Job extends BaseElement{
 
 
 }
