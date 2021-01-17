@@ -1,3 +1,41 @@
+<?php
+$last_name = 'Carrasco';
+$first_name = 'Antony';
+$name = "$first_name $last_name";
+
+$jobs = [
+    [
+        'title' => 'PHP Developer',
+        'description' => 'This is an awesome job!!'
+    ],
+    [
+        'title' =>'Python Developer',
+        'description' => 'Python is the best language i have ever worked with'
+    ],
+    [
+        'title' =>'DevOps',
+        'description' => 'DevOps is the current technology that i am learning'
+    ],
+];
+
+$size_jobs = count($jobs);
+
+$var1 = 5;
+
+// if ($var1 > 2) {
+//     echo 'Es mayor que 2';
+// }else{
+//     echo 'No es mayor que 2';
+// }
+
+// $cont = 0;
+// do {
+//     echo $jobs[$cont]['title']."<br>";
+//     $cont +=1;
+// } while ($cont < $size_jobs);
+// // var_dump($name);
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -39,39 +77,23 @@
     <div class="row">
       <div class="col">
         <div>
-          <h3 class="border-bottom-gray" >Work Experience</h3>
-          <ul>
-            <li class="work-position">
-              <h5>PHP Developer</h5>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
-              <strong>Achievements:</strong>
-              <ul>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-              </ul>
-            </li>
-            <li class="work-position">
-                <h5>PHP Developer</h5>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
-                <strong>Achievements:</strong>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                </ul>
-              </li>
-              <li class="work-position">
-                  <h5>PHP Developer</h5>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sapiente sed pariatur sint exercitationem eos expedita eveniet veniam ullam, quia neque facilis dicta voluptatibus. Eveniet doloremque ipsum itaque obcaecati nihil.</p>
-                  <strong>Achievements:</strong>
-                  <ul>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                    <li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>
-                  </ul>
-                </li>
-          </ul>
+            <h3 class="border-bottom-gray" >Work Experience</h3>
+            <ul>
+                <?php
+                    for ($i=0; $i < $size_jobs; $i++) {
+                        echo '<li class="work-position">';
+                        echo '<h5>'.$jobs[$i]['title'].'</h5>';
+                        echo '<p>'.$jobs[$i]['description'].'</p>';
+                        echo '<strong>Achievements:</strong>';
+                        echo '<ul>';
+                        echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+                        echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+                        echo '<li>Lorem ipsum dolor sit amet, 80% consectetuer adipiscing elit.</li>';
+                        echo '</ul>';
+                        echo '</li>';
+                    }
+                ?>
+            </ul>
         </div>
         <div>
             <h3 class="border-bottom-gray">Projects</h3>
