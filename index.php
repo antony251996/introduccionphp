@@ -61,10 +61,8 @@ $size_jobs = count($jobs);
                 <?php
                 $total_months = 0;
                     for ($i=0; $i < $size_jobs; $i++) {
-                        $total_months += $jobs[$i]['months'];
-                        if ($jobs[$i]['visible'] == true and $total_months <= $limit_months) {
-                          print_job($jobs[$i]);
-                        }
+                        $total_months += $jobs[$i]->getMonths();
+                        print_job($jobs[$i]);
                     }
                 ?>
             </ul>
