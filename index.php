@@ -11,6 +11,7 @@ $limit_months = 200;
 
 
 $size_jobs = count($jobs);
+$size_projects = count($projects);
 
 
 ?>
@@ -62,28 +63,20 @@ $size_jobs = count($jobs);
                 $total_months = 0;
                     for ($i=0; $i < $size_jobs; $i++) {
                         $total_months += $jobs[$i]->getMonths();
-                        print_job($jobs[$i]);
+                        printElement($jobs[$i]);
                     }
                 ?>
             </ul>
         </div>
         <div>
             <h3 class="border-bottom-gray">Projects</h3>
-            <div class="project">
-                <h5>Project X</h5>
-                <div class="row">
-                    <div class="col-3">
-                        <img id="profile-picture" src="https://ui-avatars.com/api/?name=John+Doe&size=255" alt="">
-                      </div>
-                      <div class="col">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum corporis at accusamus quisquam hic quos vel? Tenetur, ullam veniam consequatur esse quod cum, quam cupiditate assumenda natus maiores aperiam.</p>
-                        <strong>Technologies used:</strong>
-                        <span class="badge badge-secondary">PHP</span>
-                        <span class="badge badge-secondary">HTML</span>
-                        <span class="badge badge-secondary">CSS</span>
-                      </div>
-                </div>
-            </div>
+            <ul>
+              <?php
+              for ($i=0; $i < $size_projects ; $i++) { 
+                printElement($projects[$i]);
+              }
+              ?>
+            </ul>
             <div class="project">
                 <h5>Project X</h5>
                 <div class="row">
