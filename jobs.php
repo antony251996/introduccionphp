@@ -1,14 +1,9 @@
 <?php
 
+require_once 'vendor/autoload.php';
+
 
 use App\Models\{Job,Project,Printable};
-
-
-require 'app/Models/Job.php';
-require 'app/Models/Project.php';
-require_once 'app/Models/Printable.php';
-require 'lib1/Project.php';
-
 
 
 $job1 = new Job('PHP Developer','This is an awesome job!!',true,16);
